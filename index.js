@@ -291,11 +291,11 @@ const nativeConfig = (api, projectOptions, env, projectRoot, platform) => {
       .set('vue$', 'nativescript-vue')
       .set('vue', 'nativescript-vue')
       .end()
-      .symlinks(false) // don't resolve symlinks to symlinked modules
+      .symlinks(true) // don't resolve symlinks to symlinked modules
       .end();
 
     config.resolveLoader
-      .symlinks(false) //  don't resolve symlinks to symlinked modules
+      .symlinks(true) //  don't resolve symlinks to symlinked modules
       .end();
 
     config.node
